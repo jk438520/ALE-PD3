@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\title{Algorytmika ekonomiczna 3}
+\author{Mikołaj Zakrzewski i Jakub Kołaczyński}
+\date{marzec 2023}
+\newcommand{\Le}{L_{\forall}}
+\begin{document}
+
+\maketitle
+\section*{Two (players are not symmetric) functions that for a given mixed strategy
+of one player, return a best pure response of the other player.}
+\begin{flushleft}
+    Opiszmy na początek taką funkcję krop po kroku dla osoby broniącej.\\
+    1. Obliczamy na podstawie strategi mieszanej atakującego prawdopodobieństwo zaatakowania przez niego poszczególnych pól.\\
+    2. Obliczamy oczekwianą stratę przy braku obrony danego pola i ataku atakującego, mnożąc prawdopodobieństwo zaatakowania poprzez wartość pola bitwy.\\
+    3. Obrońca mając teraz k zasobów, będzie bronił k pól z największą oczekiwaną wartością straty, gdyby bronił innego pola, które nie należy do k pól z największą oczekiwaną wartością straty, to widzimy łatwo, że nie jest to najlepsza strategia czysta, gdyż może zmniejszyć swoją sumaryczną oczekwianą stratę poprzez bronienie bardziej wartościowego pola.
+    \\
+    Dla atakującego \\
+    1. Obliczamy na podstawie strategi mieszanej broniącego prawdopodobieństwo obrony przez niego poszczególnych pól.\\
+    2. Następnie by obliczyć wartość oczekiwaną danego pola mnożemy prawdobodobieństwo braku obrony danego pola przez wartość danego pola.
+    3. Następnie atakujący mając k zasobów atakuje k pól z największą wartością oczekiwaną.\\
+    
+\end{flushleft}
+
+\section*{A function that for a given mixed strategy profile returns the smallest
+value of ϵ for which the profile is an e-equilibrium of the game (the best
+response functions will be helpful here)}
+
+\begin{flushleft}
+Opiszemy tu jak działa ta funkcja dla obrońcy, gdyż dla atakującego jest ona zaimplementowana analogicznie.\\
+    1. Mając oby dwie strategie liczymy ich wynik.\\
+    2. Następnie generujemy strategię czystą dla obrońcy, na podstawie strategi mieszanej atakującego.\\
+    3. Obliczamy wynik dla nowo otrzymanej strategi czystej obrońcy i strategi mieszanej atakującego.\\
+    4. Od tak obliczonego wyniku odejmujemy wynik z podpunktu pierwszego. Tak otrzymana wartość jest naszym epsilonem.
+\end{flushleft}
+
+\end{document}
