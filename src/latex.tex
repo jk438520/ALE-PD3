@@ -12,9 +12,7 @@
 \begin{document}
 
 \maketitle
-\section*{Two (players are not symmetric) functions that for a given mixed strategy
-of one player, return a best pure response of the other player.}
-\begin{flushleft}
+\section*{1.1}
     Opiszmy na początek taką funkcję krop po kroku dla osoby broniącej.\\
     1. Obliczamy na podstawie strategi mieszanej atakującego prawdopodobieństwo zaatakowania przez niego poszczególnych pól.\\
     2. Obliczamy oczekwianą stratę przy braku obrony danego pola i ataku atakującego, mnożąc prawdopodobieństwo zaatakowania poprzez wartość pola bitwy.\\
@@ -24,12 +22,7 @@ of one player, return a best pure response of the other player.}
     1. Obliczamy na podstawie strategi mieszanej broniącego prawdopodobieństwo obrony przez niego poszczególnych pól.\\
     2. Następnie by obliczyć wartość oczekiwaną danego pola mnożemy prawdobodobieństwo braku obrony danego pola przez wartość danego pola.
     3. Następnie atakujący mając k zasobów atakuje k pól z największą wartością oczekiwaną.\\
-    
-\end{flushleft}
-
-\section*{A function that for a given mixed strategy profile returns the smallest
-value of ϵ for which the profile is an e-equilibrium of the game (the best
-response functions will be helpful here)}
+\section*{1.2}
 
 \begin{flushleft}
 Opiszemy tu jak działa ta funkcja dla obrońcy, gdyż dla atakującego jest ona zaimplementowana analogicznie.\\
@@ -37,6 +30,11 @@ Opiszemy tu jak działa ta funkcja dla obrońcy, gdyż dla atakującego jest ona
     2. Następnie generujemy strategię czystą dla obrońcy, na podstawie strategi mieszanej atakującego.\\
     3. Obliczamy wynik dla nowo otrzymanej strategi czystej obrońcy i strategi mieszanej atakującego.\\
     4. Od tak obliczonego wyniku odejmujemy wynik z podpunktu pierwszego. Tak otrzymana wartość jest naszym epsilonem.
+\end{flushleft}
+
+\section*{2.4}
+\begin{flushleft}
+    Dla atakującego szacowana wartość gry zawsze jest nieujemna, gdyż może on zdobywac tylko punkty, a nie tracic ich. Dla broniącego jest on nieujemny, gdy ma on dość surowców, by bronić wszystkie pola z niezerową wartością, gdyby miał on mniej surowców, to atakujący może atakować każde pole z takim samym prawdopodobieństwem i wartośc gry broniącego będzie ujemna.
 \end{flushleft}
 
 \end{document}
