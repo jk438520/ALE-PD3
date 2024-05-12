@@ -20,17 +20,18 @@
     \\
     Dla atakującego \\
     1. Obliczamy na podstawie strategi mieszanej broniącego prawdopodobieństwo obrony przez niego poszczególnych pól.\\
-    2. Następnie by obliczyć wartość oczekiwaną danego pola mnożemy prawdobodobieństwo braku obrony danego pola przez wartość danego pola.
+    2. Następnie by obliczyć wartość oczekiwaną danego pola mnożemy prawdobodobieństwo braku obrony danego pola przez wartość danego pola.\\
     3. Następnie atakujący mając k zasobów atakuje k pól z największą wartością oczekiwaną.\\
+    Analogicznie, gdyby nie atakował on k pól z największą wartością oczekiwaną, to nie jest to najlepsza strategia czysta.
 \section*{1.2}
 
-\begin{flushleft}
 Opiszemy tu jak działa ta funkcja dla obrońcy, gdyż dla atakującego jest ona zaimplementowana analogicznie.\\
-    1. Mając oby dwie strategie liczymy ich wynik.\\
-    2. Następnie generujemy strategię czystą dla obrońcy, na podstawie strategi mieszanej atakującego.\\
+    1. Mając oby dwie strategie liczymy wynik dla obrońcy.\\
+    2. Następnie generujemy najlepszą strategię czystą dla obrońcy, na podstawie strategi mieszanej atakującego.\\
     3. Obliczamy wynik dla nowo otrzymanej strategi czystej obrońcy i strategi mieszanej atakującego.\\
-    4. Od tak obliczonego wyniku odejmujemy wynik z podpunktu pierwszego. Tak otrzymana wartość jest naszym epsilonem.
-\end{flushleft}
+    4. Od tak obliczonego wyniku odejmujemy wynik z podpunktu pierwszego. Tak otrzymana wartość jest naszym epsilonem.\\
+    Jest to minimalna epsilon-równowaga Nasza, gdyż dla strategi mieszanej obrońcy wiemy, że wygenerowana nowa strategia obrońcy jest najlepszym możliwmy zagraniem, na strategię atakującego, więc $U_i(\sigma_i', \sigma_{-i})$ jest największe możliwe, więc 
+    $U_i(\sigma_i', \sigma_{-i}) - U_i(\sigma_i, \sigma_{-i}) \leq \epsilon$ tak otrzymany epsilon jest minimalnym spełniającym warunki. Analogicznie dla atakującego.
 
 \section*{2.4}
 \begin{flushleft}
